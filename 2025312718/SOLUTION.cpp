@@ -6,7 +6,7 @@ struct Card {
     int cnt;
 };
 
-const int MAX = 250000;
+const int MAX = 200001;
 
 Card deckA[MAX], deckB[MAX];
 Card center[MAX];
