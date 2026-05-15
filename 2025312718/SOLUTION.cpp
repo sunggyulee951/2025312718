@@ -32,8 +32,6 @@ bool canRing(Card topA, Card topB) {
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
 
     int N, M;
     cin >> N >> M;
@@ -51,7 +49,7 @@ int main() {
     Card topA = {0, 0};
     Card topB = {0, 0};
 
-    int turn = 0; // 0: A, 1: B
+    int turn = 0;
 
     for (int move = 0; move < N; move++) {
         if (turn == 0) {
