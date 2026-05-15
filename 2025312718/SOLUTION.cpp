@@ -31,39 +31,21 @@ bool canRing(Card topA, Card topB) {
     return b == 5 || c == 5 || g == 5 || s == 5;
 }
 
-void skipLineEnd() {
-    while (cin.peek() == ' ') cin.get();
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N;
-    cin >> N;
+    int N, M;
+    cin >> N >> M;
 
-    char fruit;
-    int cnt;
-
-    // A 덱 입력
-    while (cin >> fruit >> cnt) {
+    for (int i = 0; i < M; i++) {
+        cin >> fruit >> cnt;
         deckA[backA++] = {fruit, cnt};
-
-        skipLineEnd();
-        if (cin.peek() == '\n') {
-            cin.get();
-            break;
-        }
     }
 
-    // B 덱 입력
-    while (cin >> fruit >> cnt) {
+    for (int i = 0; i < M; i++) {
+        cin >> fruit >> cnt;
         deckB[backB++] = {fruit, cnt};
-
-        skipLineEnd();
-        if (cin.peek() == '\n' || cin.peek() == EOF) {
-            break;
-        }
     }
 
     Card topA = {0, 0};
